@@ -67,9 +67,7 @@ jobs:
 
     - name: Build an image from Dockerfile
       run: |
-        docker build -t docker.io/my-organization/my-app:${{ github.sha }} .
-      push: false
-      tags: ${{ env.REPOSITORY_NAME }}/${{ env.IMAGE_NAME }}:${{ env.DATE }}-${{ env.COMMIT_HASH }}
+          docker build -t docker.io/my-organization/my-app:${{ github.sha }} .
 
     - name: Process Environment variables
       run: |
